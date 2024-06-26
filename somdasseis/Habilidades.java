@@ -4,6 +4,7 @@ import java.util.Objects;
 import java.util.Scanner;
 
 public class Habilidades {
+    private final String lightmyfire = "+1 para testes com revólver";
     private final String letsdance = "2 tiros por acao com -1 nos testes" ;
     private final String fortunateson = "Ao chegar a ZERO, retorne com 3pvs" ;
     private final String dontstopbelieving = "+1 para testes com rifles ou arcos longos" ;
@@ -32,14 +33,14 @@ public class Habilidades {
     private final String suplex = "Faça um teste contra o oponente, que se perder é arremessado de cabeça no chão, tomando 2d6 de dano";
     private final String brigadebar = "Você pode usar qualquer coisa como arma. Obgetos pequenos causam 1d3 de dano; Médios causam 1d6; Grandes causam 1d6+3 de dano";
     private final String tapacomascostasdamao = "A bifa faz co que a dignidade do inimigo saia dele por alguns momentos. Ele precisa gastar uma ação para se recuperar desse tapa na dignidade";
-    private String [] hab;
     private String combate;
 
+    String [] hab = new String [2];
 
 
     public void escolherHabilidades(int op, int i){
 
-        String lightmyfire = "+1 para testes com revólver";
+
         switch (op)
         {
             case 1:

@@ -107,6 +107,12 @@ public class Cavalo {
 
     }
 
+    public void comprarCavalo(boolean compra){
+
+
+
+    }
+
     public void dadosCavalo(){
 
         if(getFidelidade()>0){
