@@ -3,7 +3,6 @@ package org.somdasseis;
 import java.util.Random;
 
 public class Dados {
-    private int num;
     private String nome;
     private int vida;
     private int acao;
@@ -16,7 +15,6 @@ public class Dados {
 
     //Inicializando Dados
     public Dados() {
-        this.num = num;
         this.vida = 6;
         this.iniciativa = 1;
         this.acao = 1;
@@ -36,13 +34,6 @@ public class Dados {
         this.nome = nome;
     }
 
-    public int getNum() {
-        return num;
-    }
-
-    public void setNum(int num) {
-        this.num = num;
-    }
 
     public int getVida() {
         return vida;
@@ -102,13 +93,23 @@ public class Dados {
 
     //Funções
 
+    public void opçõesPontos(){
+        System.out.println("Distribua 4 pontos entre: ");
+        System.out.println("Digite 1 para [ 1D6 + 2 de vida ] " );
+        System.out.println("Digite 2 para [ +  antecedente ] " );
+        System.out.println("Digite 3 para [ + 1 Ação ] " );
+        System.out.println("Digite 4 para [ + 1 Iniciativa ] ");
+        System.out.println("Restam " + getAntecedente() + " pontos para distribuir" );
+
+    }
+
     public void distribuirPontos(int j, int op){
         System.out.println("Distribua 4 pontos entre: ");
         System.out.println("Digite 1 para [ 1D6 + 2 de vida ] " );
         System.out.println("Digite 2 para [ +  antecedente ] " );
         System.out.println("Digite 3 para [ + 1 Ação ] " );
         System.out.println("Digite 4 para [ + 1 Iniciativa ] ");
-        System.out.println("Restam " + j + " pontos para distribuir" );
+        System.out.println("Restam " + (j - 1) + " pontos para distribuir" );
 
         switch(op)
         {
@@ -127,6 +128,18 @@ public class Dados {
                 break;
 
         }
+
+    }
+
+    public void mostrandoDados(){
+
+        System.out.println("Nome da personagem" + getNome());
+        System.out.println("Pontos de vida" + getVida());
+        System.out.println("Pontos de ação" + getAcao());
+        System.out.println("Pontos de iniciativa" + getIniciativa());
+        System.out.println("Pontos de defesa" + getDefesa());
+        System.out.println("Moedas" + getMoedas());
+        System.out.println("Nivel" + getNivel());
 
     }
 }

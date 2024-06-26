@@ -89,6 +89,18 @@ public class Antecedentes {
         this.roubo = roubo;
     }
 
+    public void opcoesAntecedentes(){
+        System.out.println("Digite");
+        System.out.println("[1] para Combate");
+        System.out.println("[2] para Labuta");
+        System.out.println("[3] para Negocios");
+        System.out.println("[4] para Exploracao");
+        System.out.println("[5] para Montaria");
+        System.out.println("[6] para Medicina");
+        System.out.println("[7] para Tradicao");
+        System.out.println("[8] para Roubo" );
+    }
+
 
     //Funções
     public void distribuirAntecedentes(int antecedentes, int op){
@@ -127,6 +139,19 @@ public class Antecedentes {
             }
 
         }
+
+    }
+
+    public void mostrandoAntecedentes(){
+
+        System.out.println("Antecedentes: ");
+        System.out.println("Combate: " + getCombate());
+        System.out.println("Exploração: " + getExploracao());
+        System.out.println("Labuta: " + getLabuta());
+        System.out.println("Medicina: " + getMedicina());
+        System.out.println("Montaria: " + getMontaria());
+        System.out.println("Roubo: " + getRoubo());
+        System.out.println("Tradição: " + getTradicao());
 
     }
 
